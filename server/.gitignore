@@ -1,0 +1,25 @@
+/.vscode
+
+*.env
+.env*
+
+/node_modules
+npm-debug.log
+.DS_Store
+*.tsbuildinfo
+
+# dependencies
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+/dist
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

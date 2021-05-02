@@ -1,0 +1,51 @@
+{
+    "compilerOptions": {
+        "noEmit": false,
+        "target": "es6",
+        "module": "commonjs",
+        "lib": [
+            "ES5",
+            "ES6",
+            "DOM",
+            "esnext.asynciterable"
+        ],
+        "baseUrl": ".",
+        "rootDir": "./src",
+        "outDir": "./build",
+        "paths": {
+            "~/*": [
+                "src/"
+            ]
+        },
+        "moduleResolution": "node",
+        "sourceMap": false,
+        "declaration": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "incremental": false,
+        "removeComments": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "resolveJsonModule": true,
+        "downlevelIteration": true,
+        "allowJs": true,
+        "checkJs": true,
+        "importHelpers": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules/"
+    ],
+}
