@@ -7,25 +7,12 @@ const register = async (
     { input }: IUserInput,
     context: void
 ): Promise<Boolean> => {
-    const {
-        givenName,
-        familyName,
-        city,
-        country,
-        email,
-        username,
-        password,
-    } = input;
-    const encryptedPassword = await argon2.hash(password);
+    const encryptedPassword = await argon2.hash(input.password);
+    console.log(input);
     try {
         await prisma.user.create({
             data: {
-                givenName,
-                familyName,
-                city,
-                country,
-                email,
-                username,
+                ...input,
                 password: encryptedPassword,
                 verified: true,
                 roles: ["ADMIN", "MODERATOR"],
