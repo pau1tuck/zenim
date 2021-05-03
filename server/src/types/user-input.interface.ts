@@ -4,6 +4,7 @@ export interface IUserInput {
         familyName: string;
         city: string;
         country: string;
+        username: string;
         email: string;
         password: string;
         verified: boolean;

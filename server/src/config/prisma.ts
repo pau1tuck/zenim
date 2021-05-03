@@ -1,8 +1,5 @@
-datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
-}
+import { PrismaClient } from "@prisma/client";
 
-generator client {
-  provider = "prisma-client-js"
-}
+const prisma = new PrismaClient();
+
+export default prisma;

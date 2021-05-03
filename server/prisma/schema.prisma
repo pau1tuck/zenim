@@ -7,28 +7,25 @@ generator client {
     provider = "prisma-client-js"
 }
 
-model Profile {
-    id         Int     @id @default(autoincrement())
-    user       User    @relation(fields: [userId], references: [id])
-    userId     Int     @unique
-    bio        String?
-    caption    String? @db.VarChar(255)
-    givenName  String? @db.VarChar(255)
-    familyName String? @db.VarChar(255)
-    city       String? @db.VarChar(255)
-    country    String? @db.VarChar(255)
-}
-
 model User {
     id         Int      @id @default(autoincrement())
     facebookId String?  @unique @db.VarChar(255)
     googleId   String?  @unique @db.VarChar(255)
     twitterId  String?  @unique @db.VarChar(255)
     email      String?  @unique @db.VarChar(255)
-    phone      Int      @unique @db.Integer
+    username   String?  @unique @db.VarChar(255)
+    password   String
     verified   Boolean  @default(false)
     roles      String[]
+    givenName  String?  @db.VarChar(255)
+    familyName String?  @db.VarChar(255)
+    city       String?  @db.VarChar(255)
+    country    String?  @db.VarChar(255)
+    caption    String?  @db.VarChar(255)
     createdAt  DateTime @default(now())
     updatedAt  DateTime @default(now())
-    profile    Profile?
 }
+
+// Chat
+
+// Message

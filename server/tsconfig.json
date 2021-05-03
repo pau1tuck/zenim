@@ -9,13 +9,13 @@
             "DOM",
             "esnext.asynciterable"
         ],
-        "baseUrl": ".",
+        "baseUrl": "./src",
         "rootDir": "./src",
         "outDir": "./build",
         "paths": {
             "~/*": [
-                "src/"
-            ]
+                "~/*"
+            ],
         },
         "moduleResolution": "node",
         "sourceMap": false,

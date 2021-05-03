@@ -7,6 +7,7 @@ const typeDefs = gql`
         familyName: String
         city: String
         country: String
+        username: String
         email: String
         password: String
         verified: Boolean
@@ -23,10 +24,9 @@ const typeDefs = gql`
         familyName: String!
         city: String
         country: String!
+        username: String!
         email: String!
         password: String!
-        verified: Boolean
-        roles: [String]
     }
 
     type Query {

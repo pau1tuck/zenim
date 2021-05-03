@@ -82,3 +82,30 @@ export const UserModel = models.loadSchema("User", {
         },
     },
 });
+
+
+export const register = async (
+    parent: any,
+    { input }: IUserInput,
+    ctx: any,
+    info: any
+): Promise<boolean> => {
+    const newUser = new models.instance.User({
+        givenName: input.givenName,
+        familyName: input.familyName,
+        city: input.city,
+        country: input.country,
+        email: input.email,
+        password: input.password,
+        verified: true,
+        roles: ["ADMIN", "MODERATOR"],
+    });
+    const createUser = await newUser.save((err: string) => {
+        if (err) {
+            console.log(err);
+            return false;
+        }
+        return true;
+    });
+    return createUser;
+};

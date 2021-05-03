@@ -1,9 +1,6 @@
-import { users, register } from "./user.resolvers";
+import register from "./user/register";
 
 const resolvers = {
-    Query: {
-        users,
-    },
     Mutation: {
         register,
     },
